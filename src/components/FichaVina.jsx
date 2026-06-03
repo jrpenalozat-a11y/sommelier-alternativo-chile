@@ -26,6 +26,16 @@ export default function FichaVina({ vina, nombreRegion, onClose }) {
         <button className="ficha-cerrar" onClick={onClose}>×</button>
         <p className="ficha-region">{region}{region ? ' · ' : ''}{vina.valle}</p>
         <h2 className="ficha-nombre">{vina.nombre}</h2>
+        {vina.coords && (
+          <a
+            className="ficha-coords"
+            href={`https://www.google.com/maps?q=${vina.coords.lat},${vina.coords.lng}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ⌖ {vina.coords.lat.toFixed(3)}, {vina.coords.lng.toFixed(3)}
+          </a>
+        )}
         {(vina.estilo || vina.segmento) && (
           <div className="ficha-badges">
             {vina.estilo && <span className="badge">🎨 {vina.estilo}</span>}

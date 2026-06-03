@@ -1,187 +1,107 @@
 // ============================================================
 // vinas-alternativas-datos.js
-// Versión extendida: ~100 viñas alternativas de Chile
-// (naturales, biodinámicas, orgánicas, rescate patrimonial)
-// Incluye proyectos australes extremos.
+// Catálogo de viñas alternativas REALES de Chile:
+// naturales, biodinámicas, orgánicas y de rescate patrimonial.
+// Cada viña incluye coordenadas reales (nivel localidad / valle).
 // ============================================================
 
 export const REGIONES = [
-  { id: 'atacama', nombre: 'Atacama', descripcion: 'Viñedos extremos del norte. Pequeños proyectos con uvas resilientes al calor.', valles: ['Atacama'] },
-  { id: 'coquimbo', nombre: 'Coquimbo', descripcion: 'Elqui, Limarí, Choapa. Zona de experimentación biodinámica y vinos de montaña.', valles: ['Elqui', 'Limarí', 'Choapa'] },
-  { id: 'aconcagua', nombre: 'Aconcagua', descripcion: 'Valles costeros donde nacen vinos sin aditivos, orgánicos y de impacto mínimo.', valles: ['Casablanca', 'San Antonio / Leyda'] },
-  { id: 'valle-central', nombre: 'Valle Central', descripcion: 'Corazón del alternativo: Maule, Itata (parte sur). Viñedos viejos, carignan, cinsault, país.', valles: ['Maipo', 'Cachapoal', 'Colchagua', 'Curicó', 'Maule'] },
-  { id: 'sur', nombre: 'Zona Sur', descripcion: 'Itata, Biobío, Malleco. Cuna de la uva País y el movimiento de rescate patrimonial.', valles: ['Itata', 'Biobío', 'Malleco', 'Osorno / Región Austral'] },
-  { id: 'austral', nombre: 'Patagonia Austral', descripcion: 'Aysén y Magallanes. Viñedos experimentales bajo condiciones extremas, baja intervención.', valles: ['Aysén', 'Magallanes'] }
+  { id: 'coquimbo', nombre: 'Coquimbo', descripcion: 'Elqui y Limarí. Vinos de montaña y de costa, con experimentación orgánica y biodinámica en climas extremos.', valles: ['Elqui', 'Limarí'] },
+  { id: 'aconcagua', nombre: 'Aconcagua', descripcion: 'Casablanca y San Antonio–Leyda. Valles costeros fríos: blancos vibrantes y pinots de baja intervención.', valles: ['Casablanca', 'San Antonio / Leyda'] },
+  { id: 'valle-central', nombre: 'Valle Central', descripcion: 'Maipo, Cachapoal, Colchagua, Curicó y Maule. El corazón del movimiento: biodinámica, secano y rescate de Carignan, País y Cinsault.', valles: ['Maipo', 'Cachapoal', 'Colchagua', 'Curicó', 'Maule'] },
+  { id: 'sur', nombre: 'Zona Sur', descripcion: 'Itata, Biobío y Malleco. Cuna de la uva País y el vino natural patrimonial, con tinajas de greda y viñas centenarias de pie franco.', valles: ['Itata', 'Biobío', 'Malleco'] },
 ];
 
 export const VINAS = [
-  // ========== ATACAMA (5) ==========
-  { nombre: 'Viña Volcanes del Huasco', region: 'atacama', valle: 'Atacama', cepas: ['Syrah', 'País'], estilo: 'minimal intervention', segmento: 'Natural', terruno: 'Valle de Huasco, suelos pedregosos', destacados: ['Volcanes Syrah Ancestral', 'País de Altura'] },
-  { nombre: 'Altiplano Wines', region: 'atacama', valle: 'Atacama', cepas: ['Syrah', 'Moscatel'], estilo: 'orgánico', segmento: 'Pequeña escala', terruno: 'Viñedos de altura, 2200 msnm', destacados: ['Altiplano Syrah', 'Moscatel Árido'] },
-  { nombre: 'Desierto Vivo', region: 'atacama', valle: 'Atacama', cepas: ['País', 'Syrah'], estilo: 'baja intervención', segmento: 'Rescate norteño', terruno: 'Suelos salinos, irrigación por camanchaca', destacados: ['Desierto Vivo País', 'Syrah de Niebla'] },
-  { nombre: 'Camanchaca Wines', region: 'atacama', valle: 'Atacama', cepas: ['Syrah', 'Moscatel'], estilo: 'sin sulfitos', segmento: 'Experimental', terruno: 'Viñedos irrigados por niebla costera', destacados: ['Camanchaca Syrah', 'Moscatel de Bruma'] },
-  { nombre: 'Puna Salvaje', region: 'atacama', valle: 'Atacama', cepas: ['País', 'Syrah'], estilo: 'tinajas de greda', segmento: 'Rescate', terruno: 'Altiplano, suelos volcánicos', destacados: ['Puna País', 'Syrah de Tinaja'] },
+  // ========== COQUIMBO – ELQUI ==========
+  { nombre: 'Viñedos de Alcohuaz', region: 'coquimbo', valle: 'Elqui', cepas: ['Syrah', 'Garnacha', 'Malbec'], estilo: 'orgánico', segmento: 'Alta gama', terruno: 'Alto Elqui, 1.700–2.200 msnm; granito y pizarra, vendimia manual', destacados: ['Grus', 'Rhu', 'Tococo'], coords: { lat: -30.187, lng: -70.298 } },
+  { nombre: 'Viña Falernia', region: 'coquimbo', valle: 'Elqui', cepas: ['Syrah', 'Carménère'], estilo: 'orgánico', segmento: 'Premium', terruno: 'Valle de Elqui (Vicuña); clima desértico de montaña', destacados: ['Falernia Syrah Reserva', 'Carménère Gran Reserva'], coords: { lat: -30.034, lng: -70.708 } },
 
-  // ========== COQUIMBO – ELQUI (9) ==========
-  { nombre: 'Viña Falernia (línea orgánica)', region: 'coquimbo', valle: 'Elqui', cepas: ['Syrah', 'Pinot Noir'], estilo: 'orgánico certificado', segmento: 'Premium natural', terruno: 'Viñedos biodinámicos en Elqui', destacados: ['Falernia Orgánico Syrah', 'Pinot Noir sin sulfitos'] },
-  { nombre: 'Viña Mayu (línea Auténtico)', region: 'coquimbo', valle: 'Elqui', cepas: ['Syrah', 'Carménère', 'Petit Verdot'], estilo: 'baja intervención', segmento: 'Natural', terruno: 'Suelos graníticos', destacados: ['Mayu Auténtico Syrah', 'Mayu Granito'] },
-  { nombre: 'Elqui Natural Wines', region: 'coquimbo', valle: 'Elqui', cepas: ['Syrah', 'Moscatel'], estilo: 'sin sulfitos', segmento: 'Vino vivo', terruno: 'Suelos de coluvión', destacados: ['Elqui Natural Syrah', 'Moscatel Ancestral'] },
-  { nombre: 'Casa Tamaya (línea Tierra)', region: 'coquimbo', valle: 'Elqui', cepas: ['Syrah', 'Carménère'], estilo: 'biodinámico', segmento: 'Premium', terruno: 'Suelos calcáreos', destacados: ['Tamaya Tierra Syrah', 'Tierra Carménère'] },
-  { nombre: 'Viña Elquino', region: 'coquimbo', valle: 'Elqui', cepas: ['País', 'Syrah'], estilo: 'tinajas de greda', segmento: 'Patrimonial', terruno: 'Viñedos viejos de Elqui', destacados: ['Elquino País', 'Syrah de Tinaja'] },
-  { nombre: 'Sol de Elqui Natural', region: 'coquimbo', valle: 'Elqui', cepas: ['Moscatel', 'País'], estilo: 'fermentación espontánea', segmento: 'Natural', terruno: 'Suelos aluviales', destacados: ['Moscatel Salvaje', 'País de Pueblo'] },
-  { nombre: 'Pircas de Elqui', region: 'coquimbo', valle: 'Elqui', cepas: ['Syrah', 'Petit Verdot'], estilo: 'baja intervención', segmento: 'Pequeño productor', terruno: 'Ladera granítica', destacados: ['Pircas Syrah', 'Pircas Petit Verdot'] },
-  { nombre: 'Río Claro Elqui', region: 'coquimbo', valle: 'Elqui', cepas: ['País', 'Moscatel'], estilo: 'orgánico', segmento: 'Natural', terruno: 'Terrazas fluviales', destacados: ['Río Claro País', 'Moscatel de Río'] },
-  { nombre: 'Mamalluca Natural', region: 'coquimbo', valle: 'Elqui', cepas: ['Syrah', 'Carménère'], estilo: 'sin sulfitos', segmento: 'Vino vivo', terruno: 'Suelos pizarrosos', destacados: ['Mamalluca Syrah', 'Carménère Salvaje'] },
+  // ========== COQUIMBO – LIMARÍ ==========
+  { nombre: 'Viña Tabalí', region: 'coquimbo', valle: 'Limarí', cepas: ['Chardonnay', 'Pinot Noir', 'Syrah'], estilo: 'orgánico', segmento: 'Alta gama', terruno: 'Talinay; suelos calcáreos de origen marino, influencia costera', destacados: ['Talinay Chardonnay', 'Talinay Pinot Noir'], coords: { lat: -30.601, lng: -71.339 } },
 
-  // ========== COQUIMBO – LIMARÍ (7) ==========
-  { nombre: 'Viña Tabalí (línea Pedregoso)', region: 'coquimbo', valle: 'Limarí', cepas: ['Chardonnay', 'Pinot Noir'], estilo: 'biodinámico', segmento: 'Alta gama natural', terruno: 'Suelos calcáreos', destacados: ['Tabalí Pedregoso Chardonnay', 'Pinot Noir sin filtro'] },
-  { nombre: 'Viña Maycas del Limarí (línea Quipu)', region: 'coquimbo', valle: 'Limarí', cepas: ['Chardonnay'], estilo: 'ancestral', segmento: 'Rescate', terruno: 'Suelos de origen marino', destacados: ['Quipu Chardonnay Ancestral'] },
-  { nombre: 'Talinay Natural', region: 'coquimbo', valle: 'Limarí', cepas: ['Chardonnay', 'Pinot Noir'], estilo: 'sin sulfitos', segmento: 'Natural costero', terruno: 'Suelos arcilloso-calcáreos', destacados: ['Talinay Chardonnay', 'Talinay Pinot Noir'] },
-  { nombre: 'Viña Altair (línea Minimal)', region: 'coquimbo', valle: 'Limarí', cepas: ['Syrah', 'Chardonnay'], estilo: 'orgánico', segmento: 'Alta gama', terruno: 'Laderas orientadas al mar', destacados: ['Altair Syrah Minimal', 'Altair Chardonnay'] },
-  { nombre: 'Quebrada Seca', region: 'coquimbo', valle: 'Limarí', cepas: ['País', 'Syrah'], estilo: 'tinajas', segmento: 'Rescate', terruno: 'Viñedos de secano', destacados: ['Quebrada Seca País', 'Syrah de Greda'] },
-  { nombre: 'Limarí Salvaje', region: 'coquimbo', valle: 'Limarí', cepas: ['Moscatel', 'Chardonnay'], estilo: 'fermentación espontánea', segmento: 'Natural', terruno: 'Suelos graníticos profundos', destacados: ['Moscatel Salvaje', 'Chardonnay Ancestral'] },
-  { nombre: 'Alba de Limarí', region: 'coquimbo', valle: 'Limarí', cepas: ['Syrah', 'País'], estilo: 'baja intervención', segmento: 'Pequeño productor', terruno: 'Colinas orientadas al este', destacados: ['Alba Syrah', 'País de la Quebrada'] },
+  // ========== ACONCAGUA – CASABLANCA ==========
+  { nombre: 'Viña Veramonte (Ritual)', region: 'aconcagua', valle: 'Casablanca', cepas: ['Sauvignon Blanc', 'Pinot Noir', 'Chardonnay'], estilo: 'orgánico certificado', segmento: 'Premium', terruno: 'Casablanca; suelos graníticos, influencia del Pacífico', destacados: ['Ritual Sauvignon Blanc', 'Ritual Pinot Noir'], coords: { lat: -33.296, lng: -71.345 } },
+  { nombre: 'Viña Montsecano', region: 'aconcagua', valle: 'Casablanca', cepas: ['Pinot Noir'], estilo: 'biodinámico', segmento: 'Alta gama natural', terruno: 'Casablanca; laderas graníticas, proyecto de André Ostertag', destacados: ['Montsecano Pinot Noir', 'Refugio'], coords: { lat: -33.272, lng: -71.358 } },
 
-  // ========== COQUIMBO – CHOAPA (4) ==========
-  { nombre: 'Viña De Martino (Línea Viejas Tinajas)', region: 'coquimbo', valle: 'Choapa', cepas: ['Syrah', 'País'], estilo: 'tinajas de barro', segmento: 'Patrimonial', terruno: 'Viñedos viejos de Choapa', destacados: ['Viejas Tinajas País', 'Viejas Tinajas Syrah'] },
-  { nombre: 'Choapa Extremo', region: 'coquimbo', valle: 'Choapa', cepas: ['Syrah', 'Carménère'], estilo: 'baja intervención', segmento: 'Natural', terruno: 'Pendientes graníticas', destacados: ['Choapa Syrah Salvaje', 'Carménère de Secano'] },
-  { nombre: 'Viña Loica', region: 'coquimbo', valle: 'Choapa', cepas: ['País', 'Syrah'], estilo: 'sin sulfitos', segmento: 'Pequeño productor', terruno: 'Suelos pobres, clima extremo', destacados: ['Loica País', 'Loica Syrah Natural'] },
-  { nombre: 'Piedra de Choapa', region: 'coquimbo', valle: 'Choapa', cepas: ['Syrah'], estilo: 'orgánico', segmento: 'Natural', terruno: 'Laderas de granito descompuesto', destacados: ['Piedra de Choapa Syrah'] },
+  // ========== ACONCAGUA – SAN ANTONIO / LEYDA ==========
+  { nombre: 'Viña Matetic', region: 'aconcagua', valle: 'San Antonio / Leyda', cepas: ['Syrah', 'Pinot Noir', 'Sauvignon Blanc'], estilo: 'biodinámico', segmento: 'Ultra premium natural', terruno: 'Valle de Rosario; certificado Demeter', destacados: ['EQ Syrah', 'EQ Coastal Sauvignon Blanc'], coords: { lat: -33.561, lng: -71.487 } },
+  { nombre: 'Viña Casa Marín', region: 'aconcagua', valle: 'San Antonio / Leyda', cepas: ['Sauvignon Blanc', 'Pinot Noir'], estilo: 'orgánico', segmento: 'Natural costero', terruno: 'Lo Abarca; a 4 km del mar, suelos arcillosos', destacados: ['Cipreses Sauvignon Blanc', 'Lo Abarca Hills Pinot Noir'], coords: { lat: -33.503, lng: -71.620 } },
 
-  // ========== ACONCAGUA – CASABLANCA (10) ==========
-  { nombre: 'Viña Casa Marin (línea Lo Abarca)', region: 'aconcagua', valle: 'Casablanca', cepas: ['Sauvignon Blanc', 'Pinot Noir'], estilo: 'biodinámico', segmento: 'Natural costero', terruno: 'Suelos arcillosos, niebla costera', destacados: ['Casa Marín Sauvignon Blanc', 'Lo Abarca Pinot Noir'] },
-  { nombre: 'Viña Veramonte (línea Orgánico)', region: 'aconcagua', valle: 'Casablanca', cepas: ['Sauvignon Blanc', 'Chardonnay', 'Pinot Noir'], estilo: 'orgánico certificado', segmento: 'Gran escala natural', terruno: 'Viñedos orgánicos de Casablanca', destacados: ['Veramonte Orgánico Sauvignon Blanc', 'Pinot Noir'] },
-  { nombre: 'Viña Emiliana (línea Adobe)', region: 'aconcagua', valle: 'Casablanca', cepas: ['Syrah', 'Carménère', 'Chardonnay'], estilo: 'orgánico biodinámico', segmento: 'Premium natural', terruno: 'Viñedos certificados Demeter', destacados: ['Emiliana Adobe Syrah', 'Adobe Carménère'] },
-  { nombre: 'Viña Kingston (línea Coast)', region: 'aconcagua', valle: 'Casablanca', cepas: ['Pinot Noir', 'Chardonnay'], estilo: 'biodinámico', segmento: 'Alta gama', terruno: 'Suelos arcillosos, viento costero', destacados: ['Kingston Coast Pinot Noir', 'Coast Chardonnay'] },
-  { nombre: 'Casablanca Pura', region: 'aconcagua', valle: 'Casablanca', cepas: ['Sauvignon Blanc', 'Pinot Noir'], estilo: 'sin sulfitos', segmento: 'Natural', terruno: 'Viñedos jóvenes, suelo arcilloso', destacados: ['Sauvignon Blanc Salvaje', 'Pinot Noir sin Añadidos'] },
-  { nombre: 'Viña Neblina', region: 'aconcagua', valle: 'Casablanca', cepas: ['Chardonnay', 'Pinot Noir'], estilo: 'baja intervención', segmento: 'Pequeño productor', terruno: 'Cercano al océano, niebla persistente', destacados: ['Neblina Chardonnay', 'Neblina Pinot Noir'] },
-  { nombre: 'Tierra y Mar', region: 'aconcagua', valle: 'Casablanca', cepas: ['Sauvignon Blanc', 'Syrah'], estilo: 'orgánico', segmento: 'Natural costero', terruno: 'Suelos con influencia marina', destacados: ['Tierra y Mar Sauvignon Blanc', 'Syrah de Costa'] },
-  { nombre: 'Puelche Natural', region: 'aconcagua', valle: 'Casablanca', cepas: ['Pinot Noir', 'Chardonnay'], estilo: 'fermentación espontánea', segmento: 'Vino vivo', terruno: 'Viñedos expuestos al viento', destacados: ['Puelche Pinot Noir', 'Chardonnay Puelche'] },
-  { nombre: 'Bruma Costera', region: 'aconcagua', valle: 'Casablanca', cepas: ['Sauvignon Blanc', 'Pinot Noir'], estilo: 'sin sulfitos', segmento: 'Natural', terruno: 'Cerros cercanos al mar, niebla matutina', destacados: ['Bruma Sauvignon Blanc', 'Pinot Noir de Bruma'] },
-  { nombre: 'Viña Mar (línea Humo)', region: 'aconcagua', valle: 'Casablanca', cepas: ['Pinot Noir', 'Chardonnay'], estilo: 'biodinámico', segmento: 'Premium natural', terruno: 'Suelos con influencia de neblina costera', destacados: ['Viña Mar Humo Pinot Noir', 'Chardonnay Salino'] },
+  // ========== VALLE CENTRAL – MAIPO ==========
+  { nombre: 'Viña Antiyal', region: 'valle-central', valle: 'Maipo', cepas: ['Carménère', 'Syrah', 'Cabernet Sauvignon'], estilo: 'biodinámico', segmento: 'Alta gama natural', terruno: 'Alto Jahuel (Buin); biodinámica, Álvaro Espinoza', destacados: ['Antiyal', 'Kuyén'], coords: { lat: -33.792, lng: -70.726 } },
+  { nombre: 'Viña De Martino', region: 'valle-central', valle: 'Maipo', cepas: ['Cinsault', 'País', 'Moscatel de Alejandría'], estilo: 'tinajas de greda', segmento: 'Patrimonial', terruno: 'Isla de Maipo; uvas patrimoniales de Itata, Choapa y Maule en tinaja', destacados: ['Viejas Tinajas Cinsault', 'Viejas Tinajas Muscat'], coords: { lat: -33.752, lng: -70.898 } },
+  { nombre: 'Viña Odfjell', region: 'valle-central', valle: 'Maipo', cepas: ['Carignan', 'Carménère', 'Malbec'], estilo: 'orgánico biodinámico', segmento: 'Premium', terruno: 'Padre Hurtado; viñedos orgánicos y de secano (Maule)', destacados: ['Orzada Carignan', 'Armador Carménère'], coords: { lat: -33.565, lng: -70.815 } },
+  { nombre: 'Viña Undurraga (T.H. Terroir Hunter)', region: 'valle-central', valle: 'Maipo', cepas: ['País', 'Carignan', 'Carménère'], estilo: 'rescate de cepas', segmento: 'Patrimonial', terruno: 'Línea que rescata cepas y terroirs de todo Chile', destacados: ['T.H. País', 'T.H. Carignan'], coords: { lat: -33.700, lng: -70.920 } },
 
-  // ========== ACONCAGUA – SAN ANTONIO / LEYDA (6) ==========
-  { nombre: 'Viña Matetic (línea EQ)', region: 'aconcagua', valle: 'San Antonio / Leyda', cepas: ['Pinot Noir', 'Syrah', 'Sauvignon Blanc'], estilo: 'biodinámico', segmento: 'Ultra premium natural', terruno: 'Viñedos certificados Demeter', destacados: ['Matetic EQ Pinot Noir', 'EQ Sauvignon Blanc'] },
-  { nombre: 'Viña Kingfish (proyecto natural)', region: 'aconcagua', valle: 'San Antonio / Leyda', cepas: ['Pinot Noir', 'Chardonnay'], estilo: 'sin sulfitos', segmento: 'Natural extremo', terruno: 'Costa rocosa, viento constante', destacados: ['Kingfish Sin Sulfitos Pinot Noir'] },
-  { nombre: 'Leyda Natural', region: 'aconcagua', valle: 'San Antonio / Leyda', cepas: ['Sauvignon Blanc', 'Pinot Noir'], estilo: 'baja intervención', segmento: 'Natural', terruno: 'Suelos arcillosos cercanos al mar', destacados: ['Leyda Salvaje Sauvignon Blanc', 'Pinot Noir Costero'] },
-  { nombre: 'Viña Odfjell (línea Armador)', region: 'aconcagua', valle: 'San Antonio / Leyda', cepas: ['Carménère', 'Syrah', 'Malbec'], estilo: 'orgánico biodinámico', segmento: 'Premium', terruno: 'Viñedos en ladera', destacados: ['Odfjell Armador Carménère', 'Armador Syrah'] },
-  { nombre: 'Mar Interior', region: 'aconcagua', valle: 'San Antonio / Leyda', cepas: ['Sauvignon Blanc', 'Pinot Noir'], estilo: 'sin sulfitos', segmento: 'Pequeño proyecto', terruno: 'Suelos salinos, brisa marina', destacados: ['Mar Interior Sauvignon Blanc', 'Pinot Noir de Acantilado'] },
-  { nombre: 'Piedra Sobre Piedra', region: 'aconcagua', valle: 'San Antonio / Leyda', cepas: ['Syrah', 'Pinot Noir'], estilo: 'baja intervención', segmento: 'Natural', terruno: 'Laderas rocosas expuestas al Pacífico', destacados: ['Piedra Syrah', 'Pinot Noir Costero'] },
+  // ========== VALLE CENTRAL – CACHAPOAL ==========
+  { nombre: 'Viña Tipaume', region: 'valle-central', valle: 'Cachapoal', cepas: ['Carménère', 'Cabernet Sauvignon', 'Carignan'], estilo: 'orgánico', segmento: 'Natural', terruno: 'Requínoa; agricultura orgánica familiar de pequeña escala', destacados: ['Tipaume Carménère', 'Tipaume Tinto'], coords: { lat: -34.283, lng: -70.812 } },
+  { nombre: 'Viña Clos des Fous', region: 'valle-central', valle: 'Cachapoal', cepas: ['Cabernet Sauvignon', 'Syrah', 'Pinot Noir'], estilo: 'baja intervención', segmento: 'Boutique natural', terruno: 'Terroirs extremos (Alto Cachapoal, Aconcagua, Malleco)', destacados: ['Subsollum', 'Grillos Cantores'], coords: { lat: -34.300, lng: -70.600 } },
 
-  // ========== VALLE CENTRAL – MAIPO (3) ==========
-  { nombre: 'Viña Undurraga (línea Terroir Hunter)', region: 'valle-central', valle: 'Maipo', cepas: ['Carménère', 'País'], estilo: 'rescate de cepas', segmento: 'Patrimonial', terruno: 'Viñedos viejos de Maipo', destacados: ['Terroir Hunter País', 'Carménère sin madera'] },
-  { nombre: 'Viña Santa Ema (línea Natural)', region: 'valle-central', valle: 'Maipo', cepas: ['País', 'Cinsault'], estilo: 'baja intervención', segmento: 'Natural', terruno: 'Suelos aluviales antiguos', destacados: ['Santa Ema País', 'Cinsault Natural'] },
-  { nombre: 'Alto Maipo Salvaje', region: 'valle-central', valle: 'Maipo', cepas: ['Carménère', 'Syrah'], estilo: 'sin sulfitos', segmento: 'Natural', terruno: 'Andes, suelos coluviales', destacados: ['Carménère de Montaña', 'Syrah Andino'] },
+  // ========== VALLE CENTRAL – COLCHAGUA ==========
+  { nombre: 'Viña Emiliana', region: 'valle-central', valle: 'Colchagua', cepas: ['Syrah', 'Carménère', 'Cabernet Sauvignon'], estilo: 'orgánico biodinámico', segmento: 'Premium natural', terruno: 'Los Robles, Colchagua; certificado Demeter', destacados: ['Coyam', 'Gê'], coords: { lat: -34.630, lng: -71.280 } },
+  { nombre: 'Viña Koyle', region: 'valle-central', valle: 'Colchagua', cepas: ['Carménère', 'Syrah', 'Carignan'], estilo: 'biodinámico', segmento: 'Premium', terruno: 'Los Lingues; faldas andinas, certificado Demeter', destacados: ['Koyle Royale Syrah', 'Koyle Costa'], coords: { lat: -34.550, lng: -70.930 } },
+  { nombre: 'Viña Villalobos', region: 'valle-central', valle: 'Colchagua', cepas: ['Carignan', 'País', 'Cabernet Sauvignon'], estilo: 'natural', segmento: 'Natural', terruno: 'Apalta; viñas de pie franco entre el bosque nativo', destacados: ['Villalobos Carignan', 'Villalobos Tinto'], coords: { lat: -34.645, lng: -71.130 } },
+  { nombre: 'Viña Casa Lapostolle', region: 'valle-central', valle: 'Colchagua', cepas: ['Carménère', 'Cabernet Sauvignon', 'Syrah'], estilo: 'biodinámico', segmento: 'Ultra premium natural', terruno: 'Clos Apalta, Apalta; biodinámica certificada Demeter', destacados: ['Clos Apalta', 'Cuvée Alexandre'], coords: { lat: -34.645, lng: -71.140 } },
 
-  // ========== VALLE CENTRAL – CACHAPOAL (5) ==========
-  { nombre: 'Viña Clos des Fous', region: 'valle-central', valle: 'Cachapoal', cepas: ['Chardonnay', 'Pinot Noir', 'Syrah'], estilo: 'natural', segmento: 'Boutique extremo', terruno: 'Suelos graníticos, altitud', destacados: ['Clos des Fous Chardonnay', 'Pinot Noir Austero'] },
-  { nombre: 'Viña Pedro Parra (Proyecto y solo)', region: 'valle-central', valle: 'Cachapoal', cepas: ['Cinsault', 'País', 'Carignan'], estilo: 'terroirista', segmento: 'Alta gama natural', terruno: 'Suelos graníticos profundos', destacados: ['Pedro Parra Cinsault', 'País de Granito'] },
-  { nombre: 'Cachapoal Salvaje', region: 'valle-central', valle: 'Cachapoal', cepas: ['Carménère', 'Syrah'], estilo: 'sin sulfitos', segmento: 'Natural', terruno: 'Viñedos en ladera', destacados: ['Carménère Ancestral', 'Syrah de Montaña'] },
-  { nombre: 'Viña Maturana (línea Silvestre)', region: 'valle-central', valle: 'Cachapoal', cepas: ['País', 'Cinsault'], estilo: 'fermentación espontánea', segmento: 'Vino vivo', terruno: 'Suelos coluviales', destacados: ['Silvestre País', 'Cinsault Salvaje'] },
-  { nombre: 'Los Lingues Natural', region: 'valle-central', valle: 'Cachapoal', cepas: ['Carménère', 'Petit Verdot'], estilo: 'orgánico', segmento: 'Premium natural', terruno: 'Suelos arcillosos profundos', destacados: ['Lingues Carménère', 'Petit Verdot Libre'] },
+  // ========== VALLE CENTRAL – CURICÓ ==========
+  { nombre: 'Viña Miguel Torres (Estelado)', region: 'valle-central', valle: 'Curicó', cepas: ['País', 'Cabernet Sauvignon'], estilo: 'orgánico', segmento: 'Patrimonial', terruno: 'Curicó; espumante de País del secano, pionero del rescate', destacados: ['Estelado Rosé', 'Santa Digna Estelado'], coords: { lat: -34.990, lng: -71.270 } },
+  { nombre: 'Attilio & Mochi', region: 'valle-central', valle: 'Curicó', cepas: ['País', 'Cinsault', 'Malbec'], estilo: 'natural', segmento: 'Natural', terruno: 'Sagrada Familia; vinos naturales de pequeños viñedos', destacados: ['Pipeño', 'Naranjo'], coords: { lat: -34.960, lng: -71.390 } },
+  { nombre: 'Viña Echeverría', region: 'valle-central', valle: 'Curicó', cepas: ['País', 'Cabernet Sauvignon'], estilo: 'rescate de cepas', segmento: 'Patrimonial', terruno: 'Molina; rescate de País de viñas viejas', destacados: ['No Es Pituko País', 'Reserva Cabernet'], coords: { lat: -35.060, lng: -71.290 } },
 
-  // ========== VALLE CENTRAL – COLCHAGUA (6) ==========
-  { nombre: 'Viña Garage Wine Co.', region: 'valle-central', valle: 'Colchagua', cepas: ['Carignan', 'Cinsault', 'País'], estilo: 'garage wine, baja intervención', segmento: 'Natural premium', terruno: 'Viñedos viejos de secano', destacados: ['Garage Wine Co. Carignan', 'Cinsault del Secano'] },
-  { nombre: 'Viña De la Revolución', region: 'valle-central', valle: 'Colchagua', cepas: ['País', 'Cinsault'], estilo: 'ancestral', segmento: 'Rescate', terruno: 'Viñedos prefiloxéricos', destacados: ['Revolución País', 'Cinsault Ancestral'] },
-  { nombre: 'Viña Laura Hartwig (línea Natural)', region: 'valle-central', valle: 'Colchagua', cepas: ['Syrah', 'Carménère'], estilo: 'orgánico', segmento: 'Premium', terruno: 'Suelos franco-arcillosos', destacados: ['Laura Hartwig Syrah Natural', 'Carménère sin Sulfitos'] },
-  { nombre: 'Colchagua Áspera', region: 'valle-central', valle: 'Colchagua', cepas: ['Carignan', 'País'], estilo: 'tinajas', segmento: 'Patrimonial', terruno: 'Secano interior, granito', destacados: ['Carignan de Tinaja', 'País del Secano'] },
-  { nombre: 'Viña Estampa (línea Salvaje)', region: 'valle-central', valle: 'Colchagua', cepas: ['País', 'Cinsault'], estilo: 'baja intervención', segmento: 'Natural accesible', terruno: 'Viñedos jóvenes de Colchagua', destacados: ['Estampa Salvaje País', 'Cinsault Natural'] },
-  { nombre: 'Apalta Ancestral', region: 'valle-central', valle: 'Colchagua', cepas: ['Carménère', 'Syrah'], estilo: 'sin sulfitos', segmento: 'Natural', terruno: 'Suelos graníticos de Apalta', destacados: ['Carménère Ancestral Apalta', 'Syrah de Montaña'] },
+  // ========== VALLE CENTRAL – MAULE ==========
+  { nombre: 'Viña Garage Wine Co.', region: 'valle-central', valle: 'Maule', cepas: ['Carignan', 'País', 'Cabernet Sauvignon'], estilo: 'garage wine, baja intervención', segmento: 'Natural premium', terruno: 'Truquilemu (Sauzal); viñedos viejos de Carignan en secano', destacados: ['Truquilemu Carignan', 'Old Vine Pale'], coords: { lat: -35.920, lng: -72.420 } },
+  { nombre: 'Louis-Antoine Luyt', region: 'valle-central', valle: 'Maule', cepas: ['País', 'Cinsault', 'Moscatel de Alejandría'], estilo: 'sin sulfitos', segmento: 'Vino vivo', terruno: 'Maule e Itata; País de pie franco, sin aditivos', destacados: ['Pipeño Carignan', 'El Pueblo País'], coords: { lat: -35.780, lng: -72.050 } },
+  { nombre: 'Viña J. Bouchon', region: 'valle-central', valle: 'Maule', cepas: ['País', 'Cabernet Sauvignon', 'Semillón'], estilo: 'rescate de cepas', segmento: 'Patrimonial', terruno: 'Mingre; País Salvaje que trepa los árboles del bosque', destacados: ['País Salvaje', 'Las Mercedes Granito'], coords: { lat: -35.550, lng: -72.050 } },
+  { nombre: 'Viña González Bastías', region: 'valle-central', valle: 'Maule', cepas: ['País', 'Moscatel de Alejandría', 'Semillón'], estilo: 'tinajas de greda', segmento: 'Patrimonial', terruno: 'Secano de Loncomilla; viñas centenarias junto al río Maule', destacados: ['Naranjo', 'A Quatro Manos'], coords: { lat: -35.550, lng: -71.850 } },
+  { nombre: 'El Viejo Almacén de Sauzal', region: 'valle-central', valle: 'Maule', cepas: ['País', 'Cinsault'], estilo: 'sin sulfitos', segmento: 'Natural', terruno: 'Sauzal; País de más de 200 años, Renán Cancino', destacados: ['Huaso de Sauzal', 'Tinaja'], coords: { lat: -35.850, lng: -72.100 } },
+  { nombre: 'Viña Gillmore', region: 'valle-central', valle: 'Maule', cepas: ['Carignan', 'Cinsault', 'Cabernet Sauvignon'], estilo: 'baja intervención', segmento: 'Vigno (Carignan viejos)', terruno: 'Loncomilla (San Javier); viñedos de secano', destacados: ['Hacedor de Mundos Carignan', 'Vigno'], coords: { lat: -35.620, lng: -71.720 } },
+  { nombre: 'Viña Meli', region: 'valle-central', valle: 'Maule', cepas: ['Carignan', 'Sauvignon Blanc'], estilo: 'orgánico', segmento: 'Vigno', terruno: 'Cauquenes; Carignan de secano', destacados: ['Meli Carignan', 'Marima'], coords: { lat: -35.970, lng: -72.310 } },
+  { nombre: 'García + Schwaderer', region: 'valle-central', valle: 'Maule', cepas: ['Carignan', 'País'], estilo: 'baja intervención', segmento: 'Vigno', terruno: 'Secano de Maule; proyecto de enólogos', destacados: ['Bravado Carignan', 'Cacharro País'], coords: { lat: -35.700, lng: -71.950 } },
+  { nombre: 'Viña Maitia', region: 'valle-central', valle: 'Maule', cepas: ['Cinsault', 'País', 'Moscatel de Alejandría'], estilo: 'natural', segmento: 'Natural', terruno: 'Maule; viñas de secano, vinos de baja intervención', destacados: ['Aupa Pipeño', 'Weon Naranjo'], coords: { lat: -35.600, lng: -71.800 } },
 
-  // ========== VALLE CENTRAL – CURICÓ (5) ==========
-  { nombre: 'Viña Kankura', region: 'valle-central', valle: 'Curicó', cepas: ['País', 'Moscatel', 'Cinsault'], estilo: 'fermentación espontánea', segmento: 'Natural', terruno: 'Suelos volcánicos', destacados: ['Kankura País Salvaje', 'Moscatel Ancestral'] },
-  { nombre: 'Viña Echeverría (línea Original)', region: 'valle-central', valle: 'Curicó', cepas: ['País', 'Moscatel'], estilo: 'rescate', segmento: 'Patrimonial', terruno: 'Viñedos viejos de Curicó', destacados: ['Echeverría Original País', 'Moscatel de Pueblo'] },
-  { nombre: 'Curicó Ancestral', region: 'valle-central', valle: 'Curicó', cepas: ['País', 'Cinsault'], estilo: 'sin sulfitos', segmento: 'Natural', terruno: 'Suelos aluviales profundos', destacados: ['País Libre', 'Cinsault Sin Añadidos'] },
-  { nombre: 'Viña Alpamanta (línea Orgánica)', region: 'valle-central', valle: 'Curicó', cepas: ['Carménère', 'Syrah', 'Chardonnay'], estilo: 'orgánico biodinámico', segmento: 'Premium natural', terruno: 'Certificado Demeter', destacados: ['Alpamanta Carménère', 'Alpamanta Syrah'] },
-  { nombre: 'Lomita de Curicó', region: 'valle-central', valle: 'Curicó', cepas: ['País', 'Cinsault'], estilo: 'tinajas', segmento: 'Pequeño productor', terruno: 'Suelos arcillosos antiguos', destacados: ['Lomita País', 'Cinsault de Pueblo'] },
+  // ========== SUR – ITATA ==========
+  { nombre: 'A Los Viñateros Bravos', region: 'sur', valle: 'Itata', cepas: ['País', 'Cinsault', 'Moscatel de Alejandría'], estilo: 'sin sulfitos', segmento: 'Vino vivo', terruno: 'Guarilihue; granito, pie franco, Leonardo Erazo', destacados: ['Granítico País', 'Volcánico Cinsault'], coords: { lat: -36.620, lng: -72.660 } },
+  { nombre: 'Rogue Vine', region: 'sur', valle: 'Itata', cepas: ['Cinsault', 'País'], estilo: 'natural', segmento: 'Natural', terruno: 'Itata; Justin Decker y Daniel Bañados', destacados: ['Grand Itata Tinto', 'Super Itata Blanco'], coords: { lat: -36.610, lng: -72.640 } },
+  { nombre: 'Pedro Parra y Familia', region: 'sur', valle: 'Itata', cepas: ['Cinsault'], estilo: 'terroirista', segmento: 'Alta gama natural', terruno: 'Guarilihue; Cinsault de suelos graníticos por parcela', destacados: ['Hirsute', 'Imaginador'], coords: { lat: -36.622, lng: -72.668 } },
+  { nombre: 'Roberto Henríquez', region: 'sur', valle: 'Itata', cepas: ['País', 'Cinsault', 'Moscatel de Alejandría'], estilo: 'sin sulfitos', segmento: 'Vino vivo', terruno: 'Itata y Bío Bío; viñas patrimoniales de secano', destacados: ['Santa Juana País', 'Naranjo'], coords: { lat: -36.550, lng: -72.550 } },
+  { nombre: 'Macatho', region: 'sur', valle: 'Itata', cepas: ['Moscatel de Alejandría', 'País', 'Cinsault'], estilo: 'fermentación espontánea', segmento: 'Natural', terruno: 'Coelemu; pequeños viñedos patrimoniales', destacados: ['Macatho Moscatel', 'Macatho País'], coords: { lat: -36.490, lng: -72.700 } },
 
-  // ========== VALLE CENTRAL – MAULE (9) ==========
-  { nombre: 'Viña Gillmore (línea Vigno)', region: 'valle-central', valle: 'Maule', cepas: ['Carignan', 'Cinsault', 'País'], estilo: 'biodinámico', segmento: 'Vigno (Carignan viejos)', terruno: 'Suelos graníticos, viñedos viejos', destacados: ['Gillmore Vigno Carignan', 'Cinsault de Secano'] },
-  { nombre: 'Viña Lomas de Llahuén', region: 'valle-central', valle: 'Maule', cepas: ['Carignan', 'País', 'Cinsault'], estilo: 'sin aditivos', segmento: 'Natural', terruno: 'Secano interior, arcilla roja', destacados: ['Llahuén Carignan', 'País Salvaje'] },
-  { nombre: 'Viña Tinto de Rulo', region: 'valle-central', valle: 'Maule', cepas: ['País', 'Cinsault', 'Moscatel'], estilo: 'vinos de terroir', segmento: 'Boutique natural', terruno: 'Suelos de origen volcánico', destacados: ['Tinto de Rulo País', 'Cinsault de los Viejos'] },
-  { nombre: 'Viña Secano Interior', region: 'valle-central', valle: 'Maule', cepas: ['Carignan', 'Cinsault'], estilo: 'rescate', segmento: 'Vigno', terruno: 'Viñedos de 80+ años', destacados: ['Secano Interior Carignan', 'Cinsault Milenario'] },
-  { nombre: 'Viña Valdivieso (línea Caballo Loco Natural)', region: 'valle-central', valle: 'Maule', cepas: ['Carignan', 'País'], estilo: 'baja intervención', segmento: 'Premium', terruno: 'Suelos de secano profundo', destacados: ['Caballo Loco Natural Carignan', 'País de Roca'] },
-  { nombre: 'Maule Salvaje', region: 'valle-central', valle: 'Maule', cepas: ['País', 'Moscatel'], estilo: 'tinajas de greda', segmento: 'Patrimonial', terruno: 'Viñedos antiguos de secano', destacados: ['Maule Salvaje País', 'Moscatel de Tinaja'] },
-  { nombre: 'Viña Chileano', region: 'valle-central', valle: 'Maule', cepas: ['Cinsault', 'Carignan'], estilo: 'sin sulfitos', segmento: 'Pequeño productor', terruno: 'Suelos graníticos profundos', destacados: ['Chileano Cinsault', 'Carignan Libre'] },
-  { nombre: 'Roca Madre', region: 'valle-central', valle: 'Maule', cepas: ['Carignan', 'Cinsault'], estilo: 'orgánico', segmento: 'Natural', terruno: 'Granito descompuesto, secano', destacados: ['Roca Madre Carignan', 'Cinsault de Rocas'] },
-  { nombre: 'Coihueco Natural', region: 'valle-central', valle: 'Maule', cepas: ['País', 'Moscatel'], estilo: 'fermentación espontánea', segmento: 'Rescate', terruno: 'Viñedos viejos en ladera', destacados: ['Coihueco País', 'Moscatel Silvestre'] },
+  // ========== SUR – BIOBÍO ==========
+  { nombre: 'Viña Cacique Maravilla', region: 'sur', valle: 'Biobío', cepas: ['País', 'Moscatel de Alejandría', 'Cinsault'], estilo: 'fermentación espontánea', segmento: 'Patrimonial', terruno: 'Yumbel; viñas centenarias, familia Moraga', destacados: ['Pipeño', 'Gutiño País'], coords: { lat: -37.100, lng: -72.560 } },
+  { nombre: 'Pandolfi Price', region: 'sur', valle: 'Biobío', cepas: ['Pinot Noir', 'Chardonnay', 'Sauvignon Blanc'], estilo: 'orgánico', segmento: 'Premium', terruno: 'Bío Bío; clima frío, suelos volcánicos', destacados: ['Los Patricios Pinot Noir', 'Anpta Sauvignon Blanc'], coords: { lat: -37.050, lng: -72.450 } },
 
-  // ========== ZONA SUR – ITATA (12) ==========
-  { nombre: 'Viña De Martino (línea Viejas Tinajas Itata)', region: 'sur', valle: 'Itata', cepas: ['País', 'Cinsault', 'Moscatel'], estilo: 'tinajas de greda', segmento: 'Patrimonial', terruno: 'Viñedos prefiloxéricos, suelos arcillosos', destacados: ['Viejas Tinajas País', 'Moscatel de Itata'] },
-  { nombre: 'Viña Santa Carolina (línea Vigno Itata)', region: 'sur', valle: 'Itata', cepas: ['Cinsault', 'País'], estilo: 'baja intervención', segmento: 'Vigno', terruno: 'Viñedos viejos de Itata', destacados: ['Santa Carolina Vigno Cinsault'] },
-  { nombre: 'Viña Cacique Maravilla (línea Ancestral)', region: 'sur', valle: 'Itata', cepas: ['País', 'Moscatel', 'Cinsault'], estilo: 'fermentación espontánea', segmento: 'Natural', terruno: 'Viñedos de secano', destacados: ['Cacique Maravilla País Ancestral', 'Moscatel Natural'] },
-  { nombre: 'Viña Padre (Itata)', region: 'sur', valle: 'Itata', cepas: ['País', 'Cinsault'], estilo: 'cero sulfitos', segmento: 'Vino vivo', terruno: 'Viñedos viejos, granito descompuesto', destacados: ['Padre País Sin Sulfitos', 'Padre Cinsault'] },
-  { nombre: 'Itata Natural Wines', region: 'sur', valle: 'Itata', cepas: ['País', 'Cinsault', 'Moscatel'], estilo: 'sin aditivos', segmento: 'Cooperativa', terruno: 'Viñedos patrimoniales', destacados: ['País de los Abuelos', 'Cinsault de Guarilihue'] },
-  { nombre: 'Viña Don Pato', region: 'sur', valle: 'Itata', cepas: ['País', 'Cinsault'], estilo: 'tinajas', segmento: 'Pequeño productor', terruno: 'Suelos arcillosos de Itata', destacados: ['Don Pato País', 'Cinsault Natural'] },
-  { nombre: 'Cooperative Itata', region: 'sur', valle: 'Itata', cepas: ['País', 'Moscatel'], estilo: 'orgánico', segmento: 'Comercio justo', terruno: 'Viñedos de pequeña agricultura', destacados: ['Coop País', 'Moscatel Comunitario'] },
-  { nombre: 'Viña Resistencia', region: 'sur', valle: 'Itata', cepas: ['País', 'Cinsault', 'Carignan'], estilo: 'baja intervención', segmento: 'Movimiento social', terruno: 'Viñedos rescatados por comunidades', destacados: ['Resistencia País', 'Cinsault del Pueblo'] },
-  { nombre: 'Tierra de Itata', region: 'sur', valle: 'Itata', cepas: ['País', 'Moscatel'], estilo: 'sin sulfitos', segmento: 'Natural accesible', terruno: 'Suelos de origen volcánico', destacados: ['Tierra de Itata País', 'Moscatel Libre'] },
-  { nombre: 'Viña Los Cerrillos (Itata)', region: 'sur', valle: 'Itata', cepas: ['País', 'Cinsault'], estilo: 'tinajas', segmento: 'Rescate', terruno: 'Viñedos de más de 120 años', destacados: ['Cerrillos País Ancestral', 'Cinsault Centenario'] },
-  { nombre: 'Guarilihue Salvaje', region: 'sur', valle: 'Itata', cepas: ['País', 'Cinsault'], estilo: 'sin sulfitos', segmento: 'Natural', terruno: 'Suelos de granito rosado', destacados: ['Guarilihue País', 'Cinsault de Granito'] },
-  { nombre: 'Raíces de Itata', region: 'sur', valle: 'Itata', cepas: ['País', 'Moscatel'], estilo: 'fermentación espontánea', segmento: 'Rescate patrimonial', terruno: 'Viñedos prefiloxéricos certificados', destacados: ['Raíces País', 'Moscatel Flor'] },
-
-  // ========== ZONA SUR – BIOBÍO (6) ==========
-  { nombre: 'Viña Aquitania (línea Sol de Sol)', region: 'sur', valle: 'Biobío', cepas: ['Chardonnay', 'Pinot Noir'], estilo: 'biodinámico', segmento: 'Premium natural', terruno: 'Suelos volcánicos, clima frío', destacados: ['Sol de Sol Chardonnay', 'Aquitania Pinot Noir Sin Sulfitos'] },
-  { nombre: 'Viña Volcanes de Chile (línea Orgánico)', region: 'sur', valle: 'Biobío', cepas: ['Pinot Noir', 'Chardonnay'], estilo: 'orgánico', segmento: 'Accesible natural', terruno: 'Suelos de origen volcánico', destacados: ['Volcanes Pinot Noir Orgánico', 'Chardonnay Natural'] },
-  { nombre: 'Biobío Salvaje', region: 'sur', valle: 'Biobío', cepas: ['Pinot Noir', 'Sauvignon Blanc'], estilo: 'sin sulfitos', segmento: 'Natural', terruno: 'Suelos volcánicos profundos', destacados: ['Pinot Noir Austral', 'Sauvignon Blanc Libre'] },
-  { nombre: 'Viña La Frontera Natural', region: 'sur', valle: 'Biobío', cepas: ['Chardonnay', 'Pinot Noir'], estilo: 'fermentación espontánea', segmento: 'Pequeño productor', terruno: 'Viñedos cercanos al río Biobío', destacados: ['La Frontera Chardonnay', 'Pinot Noir Silvestre'] },
-  { nombre: 'Viña Rucalhue', region: 'sur', valle: 'Biobío', cepas: ['País', 'Cinsault'], estilo: 'tinajas', segmento: 'Rescate mapuche', terruno: 'Viñedos patrimoniales en tierras mapuche', destacados: ['Rucalhue País', 'Cinsault del Wallmapu'] },
-  { nombre: 'Río Laja Natural', region: 'sur', valle: 'Biobío', cepas: ['Pinot Noir', 'Chardonnay'], estilo: 'orgánico', segmento: 'Natural', terruno: 'Terrazas del río Laja, suelos volcánicos', destacados: ['Laja Pinot Noir', 'Chardonnay de Ribera'] },
-
-  // ========== ZONA SUR – MALLECO (4) ==========
-  { nombre: 'Viña Clos des Fous (Malleco)', region: 'sur', valle: 'Malleco', cepas: ['Chardonnay', 'Pinot Noir'], estilo: 'natural extremo', segmento: 'Alta gama', terruno: 'Suelos graníticos, alta pluviosidad', destacados: ['Clos des Fous Malleco Chardonnay', 'Pinot Noir Austero'] },
-  { nombre: 'Viña Pedro Parra (Malleco)', region: 'sur', valle: 'Malleco', cepas: ['Chardonnay', 'Pinot Noir'], estilo: 'terroirista', segmento: 'Ultra premium natural', terruno: 'Granitos profundos', destacados: ['Pedro Parra Malleco Chardonnay', 'Pinot Noir'] },
-  { nombre: 'Malleco Frío', region: 'sur', valle: 'Malleco', cepas: ['Chardonnay', 'Pinot Noir'], estilo: 'baja intervención', segmento: 'Natural', terruno: 'Suelos de origen glaciar', destacados: ['Malleco Chardonnay Glaciar', 'Pinot Noir Austral'] },
-  { nombre: 'Verde Malleco', region: 'sur', valle: 'Malleco', cepas: ['Riesling', 'Pinot Noir'], estilo: 'sin sulfitos', segmento: 'Experimental', terruno: 'Laderas andinas, clima extremo', destacados: ['Riesling de Malleco', 'Pinot Noir Libre'] },
-
-  // ========== ZONA SUR – OSORNO / REGIÓN AUSTRAL (4) ==========
-  { nombre: 'Viña Los Volcanes Austral', region: 'sur', valle: 'Osorno / Región Austral', cepas: ['Riesling', 'Gewürztraminer'], estilo: 'baja intervención', segmento: 'Experimental austral', terruno: 'Suelos volcánicos, clima extremo', destacados: ['Riesling Glaciar', 'Gewürztraminer Salvaje'] },
-  { nombre: 'Viña Patagonia Wine', region: 'sur', valle: 'Osorno / Región Austral', cepas: ['Pinot Noir', 'Riesling'], estilo: 'orgánico', segmento: 'Pequeño proyecto', terruno: 'Suelos de origen glacial', destacados: ['Patagonia Pinot Noir', 'Riesling Austral'] },
-  { nombre: 'Osorno Ancestral', region: 'sur', valle: 'Osorno / Región Austral', cepas: ['Riesling', 'Gewürztraminer'], estilo: 'sin sulfitos', segmento: 'Natural extremo', terruno: 'Viñedos en la precordillera andina', destacados: ['Riesling Los Andes', 'Gewürztraminer Salvaje'] },
-  { nombre: 'Lago Ranco Wines', region: 'sur', valle: 'Osorno / Región Austral', cepas: ['Riesling', 'Pinot Noir'], estilo: 'biodinámico', segmento: 'Natural', terruno: 'Orillas del lago Ranco, suelos volcánicos', destacados: ['Ranco Riesling', 'Pinot Noir del Lago'] },
-
-  // ========== AUSTRAL (6) ==========
-  { nombre: 'Aysén Vino Extremo', region: 'austral', valle: 'Aysén', cepas: ['Riesling', 'Pinot Noir'], estilo: 'baja intervención', segmento: 'Experimental patagonia', terruno: 'Suelos glaciares, vientos intensos', destacados: ['Aysén Riesling', 'Pinot Noir Subantártico'] },
-  { nombre: 'Ventisquero Austral', region: 'austral', valle: 'Aysén', cepas: ['Gewürztraminer', 'Riesling'], estilo: 'sin sulfitos', segmento: 'Natural', terruno: 'Cercano a campos de hielo, suelos ácidos', destacados: ['Ventisquero Gewürztraminer', 'Riesling Helado'] },
-  { nombre: 'Patagonia Salvaje (Aysén)', region: 'austral', valle: 'Aysén', cepas: ['Pinot Noir', 'Chardonnay'], estilo: 'orgánico', segmento: 'Pequeño proyecto', terruno: 'Valle protegido, influencia oceánica', destacados: ['Patagonia Pinot Noir', 'Chardonnay Austral'] },
-  { nombre: 'Magallanes Wine Project', region: 'austral', valle: 'Magallanes', cepas: ['Riesling', 'Pinot Noir'], estilo: 'baja intervención', segmento: 'Experimental extremo', terruno: 'Invernaderos protegidos, suelos de turba', destacados: ['Magallanes Riesling', 'Pinot Noir Fin del Mundo'] },
-  { nombre: 'Finis Terrae', region: 'austral', valle: 'Magallanes', cepas: ['Gewürztraminer', 'Riesling'], estilo: 'sin sulfitos', segmento: 'Natural', terruno: 'Último valle antes del estrecho', destacados: ['Finis Terrae Gewürztraminer', 'Riesling Antártico'] },
-  { nombre: 'Porvenir Vino Patagónico', region: 'austral', valle: 'Magallanes', cepas: ['Pinot Noir', 'Chardonnay'], estilo: 'biodinámico', segmento: 'Alta gama austral', terruno: 'Suelos de origen marino, clima subpolar', destacados: ['Porvenir Pinot Noir', 'Chardonnay de Magallanes'] }
+  // ========== SUR – MALLECO ==========
+  { nombre: 'Viña Aquitania (Sol de Sol)', region: 'sur', valle: 'Malleco', cepas: ['Chardonnay', 'Pinot Noir'], estilo: 'baja intervención', segmento: 'Alta gama', terruno: 'Traiguén; clima frío extremo, suelos rojos volcánicos', destacados: ['Sol de Sol Chardonnay', 'Sol de Sol Pinot Noir'], coords: { lat: -38.250, lng: -72.670 } },
 ];
 
 export const CEPAS = [
-  { nombre: 'País', tipo: 'tinta', nota: 'La uva más antigua de Chile (siglo XVI). Vinos livianos, frescos, con carácter rústico y acidez natural. Base del movimiento de rescate patrimonial.' },
-  { nombre: 'Cinsault', tipo: 'tinta', nota: 'Cepa mediterránea que en Itata y Maule da vinos florales, suaves y muy bebibles. Ideal para vinos naturales sin sulfitos.' },
-  { nombre: 'Carignan', tipo: 'tinta', nota: 'Cepa francesa que encontró en el Secano Interior de Maule viñedos viejos (80+ años). Vinos potentes, tánicos y con gran acidez.' },
-  { nombre: 'Moscatel de Alejandría', tipo: 'blanca', nota: 'Uva aromática usada en tinajas. Vinos blancos secos o dulces, con notas florales y cítricas, muy frescos.' },
-  { nombre: 'Corinto', tipo: 'tinta', nota: 'Cepa minoritaria rescatada en Coquimbo. Produce vinos ligeros, especiados y muy raros.' },
-  { nombre: 'Syrah sin sulfitos', tipo: 'tinta', nota: 'Versión minimalista de la Syrah, fermentación espontánea y embotellado sin aditivos, conservando fruta pura.' },
-  { nombre: 'Chardonnay natural', tipo: 'blanca', nota: 'Chardonnay fermentado con levaduras indígenas, sin barricas ni sulfitos, buscando frescura y expresión de suelo.' },
-  { nombre: 'Pinot Noir sin filtro', tipo: 'tinta', nota: 'Pinot Noir de viñedos fríos, embotellado sin clarificar ni filtrar, conservando toda su textura y viveza.' },
-  { nombre: 'Gewürztraminer austral', tipo: 'blanca', nota: 'Rara en Chile. Produce vinos exóticos con notas de lichi y rosas, ideal para climas fríos como Osorno y Magallanes.' },
-  { nombre: 'Riesling natural', tipo: 'blanca', nota: 'En zonas australes logra acidez vibrante, notas cítricas y potencial de guarda sin sulfitos.' },
-  { nombre: 'Carménère natural', tipo: 'tinta', nota: 'Versión sin roble ni aditivos, fruta pura y taninos suaves, buscando la expresión más auténtica de la cepa.' },
-  { nombre: 'Semillón', tipo: 'blanca', nota: 'Cepa poco común en Chile pero rescatada en pequeños proyectos del Maule, con potencial de guarda.' },
-  { nombre: 'Trousseau', tipo: 'tinta', nota: 'Cepa ancestral del Jura francés, recientemente introducida en Itata con vinos ligeros y florales.' }
+  { nombre: 'País', tipo: 'tinta', nota: 'La uva más antigua de Chile (siglo XVI). Vinos livianos, frescos y rústicos; base del rescate patrimonial en Itata, Maule y Biobío.' },
+  { nombre: 'Cinsault', tipo: 'tinta', nota: 'Cepa mediterránea que en Itata y Maule da tintos florales, suaves y muy bebibles. Reina del vino natural chileno.' },
+  { nombre: 'Carignan', tipo: 'tinta', nota: 'En el secano de Maule encontró viñedos viejos (80+ años). Vinos potentes, tánicos y de gran acidez; alma del sello VIGNO.' },
+  { nombre: 'Moscatel de Alejandría', tipo: 'blanca', nota: 'Uva aromática del secano sur, vinificada en tinajas de greda. Blancos secos o naranjos, florales y muy frescos.' },
+  { nombre: 'Syrah', tipo: 'tinta', nota: 'Versátil: potente y especiada en climas cálidos, fresca y floral en costa y montaña (Elqui, Casablanca).' },
+  { nombre: 'Carménère', tipo: 'tinta', nota: 'La cepa emblema de Chile. En versiones de baja intervención muestra fruta pura, pimentón y taninos suaves.' },
+  { nombre: 'Cabernet Sauvignon', tipo: 'tinta', nota: 'La más plantada del país. En el Maipo y el secano da tintos estructurados de larga guarda.' },
+  { nombre: 'Chardonnay', tipo: 'blanca', nota: 'En climas fríos (Limarí, Malleco) logra tensión y mineralidad; fermentado con levaduras nativas en los proyectos naturales.' },
+  { nombre: 'Pinot Noir', tipo: 'tinta', nota: 'Cepa de clima frío; en Casablanca, Leyda y Malleco da tintos finos, frescos y de textura sedosa.' },
+  { nombre: 'Sauvignon Blanc', tipo: 'blanca', nota: 'La estrella blanca de los valles costeros (Casablanca, Leyda). Cítrico y herbáceo, con gran salinidad marina.' },
+  { nombre: 'Garnacha', tipo: 'tinta', nota: 'Rara en Chile; en el alto Elqui aporta frescura y especias a vinos de gran altitud.' },
+  { nombre: 'Malbec', tipo: 'tinta', nota: 'Presente en viñas de montaña y secano; fruta intensa y taninos amables en manos de bajo intervención.' },
+  { nombre: 'Semillón', tipo: 'blanca', nota: 'Cepa histórica rescatada en el secano de Maule; blancos con cuerpo, textura y potencial de guarda.' },
 ];
 
 export const VALLE_COORDS = {
-  'Atacama': { lat: -27.5, lng: -70.5 },
-  'Elqui': { lat: -29.9, lng: -70.8 },
-  'Limarí': { lat: -30.6, lng: -71.2 },
-  'Choapa': { lat: -31.7, lng: -71.1 },
-  'Aconcagua': { lat: -32.8, lng: -70.9 },
-  'Casablanca': { lat: -33.3, lng: -71.4 },
-  'San Antonio / Leyda': { lat: -33.6, lng: -71.6 },
-  'Maipo': { lat: -33.7, lng: -70.8 },
-  'Cachapoal': { lat: -34.2, lng: -70.7 },
-  'Colchagua': { lat: -34.5, lng: -71.1 },
-  'Curicó': { lat: -35.0, lng: -71.2 },
-  'Maule': { lat: -35.5, lng: -71.7 },
-  'Itata': { lat: -36.4, lng: -72.8 },
-  'Biobío': { lat: -37.0, lng: -72.5 },
-  'Malleco': { lat: -38.2, lng: -72.3 },
-  'Osorno / Región Austral': { lat: -40.6, lng: -73.1 },
-  'Aysén': { lat: -45.5, lng: -72.0 },
-  'Magallanes': { lat: -53.0, lng: -70.9 }
+  'Elqui': { lat: -30.03, lng: -70.71 },
+  'Limarí': { lat: -30.60, lng: -71.30 },
+  'Casablanca': { lat: -33.30, lng: -71.41 },
+  'San Antonio / Leyda': { lat: -33.55, lng: -71.50 },
+  'Maipo': { lat: -33.70, lng: -70.85 },
+  'Cachapoal': { lat: -34.28, lng: -70.80 },
+  'Colchagua': { lat: -34.64, lng: -71.13 },
+  'Curicó': { lat: -35.00, lng: -71.30 },
+  'Maule': { lat: -35.70, lng: -71.90 },
+  'Itata': { lat: -36.60, lng: -72.65 },
+  'Biobío': { lat: -37.05, lng: -72.50 },
+  'Malleco': { lat: -38.25, lng: -72.67 },
 };

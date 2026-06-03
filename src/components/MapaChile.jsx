@@ -4,31 +4,24 @@ import { useT } from '../i18n';
 const SVG_NS = 'http://www.w3.org/2000/svg';
 
 const ZONA_SVG = {
-  atacama:        ['Region_Arica_Parinacota', 'Region_Tarapaca', 'Region_Antofagasta', 'Region_Atacama'],
   coquimbo:       ['Region_Coquimbo'],
   aconcagua:      ['Region_Valparaiso'],
   'valle-central':['Region_Metropolitana', 'Region_OHiggins', 'Region_Maule'],
-  sur:            ['Nuble-9', 'Biobio-4', 'Region_Araucania', 'Region_Los_Rios', 'Region_Los_Lagos'],
-  austral:        ['Region_Aisen', 'Region_Magallanes'],
+  sur:            ['Nuble-9', 'Biobio-4', 'Region_Araucania'],
 };
 
 const ZONA_COLOR = {
-  atacama:        '#bb6a52',
-  coquimbo:       '#a83f44',
-  aconcagua:      '#922f3c',
+  coquimbo:       '#bb6a52',
+  aconcagua:      '#a83f44',
   'valle-central':'#7a2433',
   sur:            '#561a29',
-  austral:        '#34101c',
 };
 
 const VALLE_POS = {
-  'Atacama':                 { anchor: 'Region_Atacama', f: 0.55 },
-  'Elqui':                   { anchor: 'Region_Coquimbo', f: 0.18 },
-  'Limarí':                  { anchor: 'Region_Coquimbo', f: 0.5 },
-  'Choapa':                  { anchor: 'Region_Coquimbo', f: 0.82 },
-  'Aconcagua':               { vp: 0.18 },
-  'Casablanca':              { vp: 0.5 },
-  'San Antonio / Leyda':     { vp: 0.82 },
+  'Elqui':                   { anchor: 'Region_Coquimbo', f: 0.2 },
+  'Limarí':                  { anchor: 'Region_Coquimbo', f: 0.7 },
+  'Casablanca':              { vp: 0.4 },
+  'San Antonio / Leyda':     { vp: 0.78 },
   'Maipo':                   { anchor: 'Region_Metropolitana', f: 0.5 },
   'Cachapoal':               { anchor: 'Region_OHiggins', f: 0.32 },
   'Colchagua':               { anchor: 'Region_OHiggins', f: 0.72 },
@@ -37,9 +30,6 @@ const VALLE_POS = {
   'Itata':                   { anchor: 'Nuble-9', f: 0.5 },
   'Biobío':                  { anchor: 'Biobio-4', f: 0.5 },
   'Malleco':                 { anchor: 'Region_Araucania', f: 0.4 },
-  'Osorno / Región Austral': { anchor: 'Region_Los_Rios', f: 0.85 },
-  'Aysén':                   { anchor: 'Region_Aisen', f: 0.5 },
-  'Magallanes':              { anchor: 'Region_Magallanes', f: 0.5 },
 };
 
 const ISLA = /Isla|Pascua|Juan_Fern|Selkirk|Crusoe|Ant[aá]rt|Rect_|San_Felix|Sala_y/i;
@@ -177,12 +167,10 @@ export default function MapaChile({ regiones, regionActiva, onSelectRegion, onSe
         });
 
         const ZL = [
-          { key: 'atacama', anchor: 'Region_Atacama', yo: 0 },
           { key: 'coquimbo', anchor: 'Region_Coquimbo', yo: -0.18 },
           { key: 'aconcagua', vp: true, yo: 0 },
           { key: 'valle-central', anchor: 'Region_OHiggins', yo: 0 },
           { key: 'sur', anchor: 'Region_Araucania', yo: 0 },
-          { key: 'austral', anchor: 'Region_Aisen', yo: 0 },
         ];
         ZL.forEach((z) => {
           let landX, ly;

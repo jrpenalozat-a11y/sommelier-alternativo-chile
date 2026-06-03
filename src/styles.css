@@ -160,6 +160,8 @@ body {
 .ficha-cerrar { position: absolute; top: 14px; right: 16px; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--linea); background: #fff; color: var(--vino); font-size: 22px; cursor: pointer; }
 .ficha-region { text-transform: uppercase; letter-spacing: 2px; font-size: 13px; color: var(--dorado); font-weight: 600; }
 .ficha-nombre { font-family: var(--serif); font-size: 34px; font-weight: 700; color: var(--vino); margin: 0; }
+.ficha-coords { display: inline-block; margin-top: 6px; font-size: 14px; color: var(--tinta-suave); text-decoration: none; border-bottom: 1px dotted var(--dorado); }
+.ficha-coords:hover { color: var(--vino); }
 .ficha-badges { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
 .badge { font-size: 15px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--linea); background: var(--crema-papel); }
 .ficha-divisor { text-align: center; color: var(--dorado); font-size: 22px; margin: 12px 0 14px; }

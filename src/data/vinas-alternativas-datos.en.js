@@ -7,47 +7,39 @@
 
 // Regiones: nombre visible + descripción
 export const REGIONES_EN = {
-  atacama: {
-    nombre: 'Atacama',
-    descripcion: 'Extreme far-northern vineyards. Small projects working heat-resilient grapes.',
-  },
   coquimbo: {
     nombre: 'Coquimbo',
-    descripcion: 'Elqui, Limarí, Choapa. A hub of biodynamic experimentation and mountain wines.',
+    descripcion: 'Elqui and Limarí. Mountain and coastal wines, with organic and biodynamic experimentation in extreme climates.',
   },
   aconcagua: {
     nombre: 'Aconcagua',
-    descripcion: 'Coastal valleys producing additive-free, organic and low-impact wines.',
+    descripcion: 'Casablanca and San Antonio–Leyda. Cool coastal valleys: vibrant whites and low-intervention Pinots.',
   },
   'valle-central': {
     nombre: 'Central Valley',
-    descripcion: 'The heart of the alternative scene: old vineyards of Carignan, Cinsault and País.',
+    descripcion: 'Maipo, Cachapoal, Colchagua, Curicó and Maule. The heart of the movement: biodynamics, dry farming and the revival of Carignan, País and Cinsault.',
   },
   sur: {
     nombre: 'South',
-    descripcion: 'Itata, Biobío, Malleco. Cradle of the País grape and the heritage-revival movement.',
-  },
-  austral: {
-    nombre: 'Southern Patagonia',
-    descripcion: 'Aysén and Magallanes. Experimental vineyards under extreme conditions, low intervention.',
+    descripcion: 'Itata, Biobío and Malleco. Cradle of the País grape and heritage natural wine, with clay amphorae and century-old ungrafted vines.',
   },
 };
 
 // Notas de cepas (el nombre y la etiqueta de tipo los maneja la UI)
 export const CEPAS_EN = {
-  'País': "Chile's oldest grape (16th century). Light, fresh wines with a rustic character and natural acidity. The backbone of the heritage-revival movement.",
-  'Cinsault': 'A Mediterranean variety that in Itata and Maule yields floral, soft and very drinkable wines. Ideal for natural, sulfite-free wines.',
-  'Carignan': "A French variety that found old vineyards (80+ years) in Maule's dry-farmed interior. Powerful, tannic wines with great acidity.",
-  'Moscatel de Alejandría': 'An aromatic grape used in clay amphorae. Dry or sweet whites with floral and citrus notes, very fresh.',
-  'Corinto': 'A minority variety revived in Coquimbo. Produces light, spicy and very rare wines.',
-  'Syrah sin sulfitos': 'A minimalist take on Syrah: spontaneous fermentation and bottling with no additives, preserving pure fruit.',
-  'Chardonnay natural': 'Chardonnay fermented with indigenous yeasts, no oak or sulfites, seeking freshness and soil expression.',
-  'Pinot Noir sin filtro': 'Pinot Noir from cool vineyards, bottled unfined and unfiltered, keeping all its texture and vibrancy.',
-  'Gewürztraminer austral': 'Rare in Chile. Yields exotic wines with lychee and rose notes, ideal for cold climates like Osorno and Magallanes.',
-  'Riesling natural': 'In southern zones it achieves vibrant acidity, citrus notes and ageing potential without sulfites.',
-  'Carménère natural': "An oak-free, additive-free version: pure fruit and soft tannins, seeking the grape's most authentic expression.",
-  'Semillón': 'Uncommon in Chile but revived in small Maule projects, with ageing potential.',
-  'Trousseau': "An ancestral grape from France's Jura, recently introduced in Itata with light, floral wines.",
+  'País': "Chile's oldest grape (16th century). Light, fresh, rustic reds; the backbone of the heritage revival in Itata, Maule and Biobío.",
+  'Cinsault': 'A Mediterranean variety that in Itata and Maule yields floral, soft and very drinkable reds. The queen of Chilean natural wine.',
+  'Carignan': 'Found old vineyards (80+ years) in Maule’s dry-farmed interior. Powerful, tannic, high-acid wines; the soul of the VIGNO seal.',
+  'Moscatel de Alejandría': 'An aromatic grape of the southern dry-farmed zone, vinified in clay amphorae. Dry or orange whites, floral and very fresh.',
+  'Syrah': 'Versatile: powerful and spicy in warm climates, fresh and floral on the coast and in the mountains (Elqui, Casablanca).',
+  'Carménère': "Chile's emblematic grape. In low-intervention versions it shows pure fruit, bell pepper and soft tannins.",
+  'Cabernet Sauvignon': 'The most planted grape in the country. In Maipo and the dry-farmed interior it gives structured, age-worthy reds.',
+  'Chardonnay': 'In cool climates (Limarí, Malleco) it achieves tension and minerality; fermented with native yeasts in the natural projects.',
+  'Pinot Noir': 'A cool-climate grape; in Casablanca, Leyda and Malleco it gives fine, fresh reds with a silky texture.',
+  'Sauvignon Blanc': 'The star white of the coastal valleys (Casablanca, Leyda). Citrus and herbaceous, with great maritime salinity.',
+  'Garnacha': 'Rare in Chile; in upper Elqui it brings freshness and spice to high-altitude wines.',
+  'Malbec': 'Found in mountain and dry-farmed vineyards; intense fruit and gentle tannins in low-intervention hands.',
+  'Semillón': 'A historic grape revived in the Maule dry-farmed interior; whites with body, texture and ageing potential.',
 };
 
 // Diccionario de estilos (vocabulario controlado)
@@ -109,4 +101,5 @@ export const SEGMENTO_EN = {
   'Experimental patagonia': 'Patagonian experimental',
   'Experimental extremo': 'Extreme experimental',
   'Alta gama austral': 'Southern high-end',
+  'Natural premium': 'Natural premium',
 };
