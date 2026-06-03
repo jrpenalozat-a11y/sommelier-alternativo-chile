@@ -1,0 +1,48 @@
+import React, { useState } from 'react';
+import { Routes, Route, NavLink } from 'react-router-dom';
+import { useTema } from './context/TemaContext';
+import { useFavoritos } from './context/FavoritosContext';
+import ExplorarPage from './pages/ExplorarPage';
+import CepasPage from './pages/CepasPage';
+import FavoritosPage from './pages/FavoritosPage';
+import FichaVina from './components/FichaVina';
+
+function App() {
+  const { tema, setTema } = useTema();
+  const { favoritos } = useFavoritos();
+  const [vinaActiva, setVinaActiva] = useState(null);
+
+  return (
+    <div className="app">
+      <header className="cabecera">
+        <div className="cabecera-marca">
+          <span className="cabecera-copa" aria-hidden="true">🍷</span>
+          <div>
+            <h1 className="cabecera-titulo">Sommelier Alternativo de Chile</h1>
+            <p className="cabecera-lema">Viñas naturales · Biodinámicas · Rescate de cepas</p>
+          </div>
+        </div>
+        <nav className="cabecera-nav">
+          <NavLink to="/" className={({ isActive }) => `nav-btn ${isActive ? 'activo' : ''}`}>Explorar</NavLink>
+          <NavLink to="/cepas" className={({ isActive }) => `nav-btn ${isActive ? 'activo' : ''}`}>Cepas</NavLink>
+          <NavLink to="/favoritos" className={({ isActive }) => `nav-btn ${isActive ? 'activo' : ''}`}>
+            ❤️ {favoritos.length > 0 && <span className="favoritos-badge">{favoritos.length}</span>}
+          </NavLink>
+          <button className="tema-btn" onClick={() => setTema(tema === 'claro' ? 'oscuro' : 'claro')}>
+            {tema === 'claro' ? '🌙' : '☀️'}
+          </button>
+        </nav>
+      </header>
+
+      <Routes>
+        <Route path="/" element={<ExplorarPage onVerVina={setVinaActiva} />} />
+        <Route path="/cepas" element={<CepasPage />} />
+        <Route path="/favoritos" element={<FavoritosPage onVerVina={setVinaActiva} />} />
+      </Routes>
+
+      {vinaActiva && <FichaVina vina={vinaActiva} onClose={() => setVinaActiva(null)} />}
+    </div>
+  );
+}
+
+export default App;
