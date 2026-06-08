@@ -11,10 +11,10 @@ const ZONA_SVG = {
 };
 
 const ZONA_COLOR = {
-  coquimbo:       '#bb6a52',
-  aconcagua:      '#a83f44',
-  'valle-central':'#7a2433',
-  sur:            '#561a29',
+  coquimbo:       '#7aa84e',
+  aconcagua:      '#4f9a45',
+  'valle-central':'#357a3a',
+  sur:            '#1f5a2c',
 };
 
 const VALLE_POS = {
@@ -193,11 +193,11 @@ export default function MapaChile({ regiones, regionActiva, onSelectRegion, onSe
         el('circle', { r: cr, fill: 'rgba(251,246,236,.7)', stroke: '#c9a24b', 'stroke-width': cr * 0.04 }, rose);
         el('line', { x1: 0, y1: -cr * 0.85, x2: 0, y2: cr * 0.85, stroke: '#b98f2e', 'stroke-width': cr * 0.04 }, rose);
         el('line', { x1: -cr * 0.85, y1: 0, x2: cr * 0.85, y2: 0, stroke: '#b98f2e', 'stroke-width': cr * 0.04 }, rose);
-        el('polygon', { points: `0,${-cr * 0.85} ${cr * 0.16},0 0,${cr * 0.24} ${-cr * 0.16},0`, fill: '#7b2233' }, rose);
+        el('polygon', { points: `0,${-cr * 0.85} ${cr * 0.16},0 0,${cr * 0.24} ${-cr * 0.16},0`, fill: '#2f6b3d' }, rose);
         el('polygon', { points: `0,${cr * 0.85} ${cr * 0.16},0 0,${-cr * 0.24} ${-cr * 0.16},0`, fill: '#caa24c' }, rose);
         el('polygon', { points: `${cr * 0.85},0 0,${cr * 0.16} ${-cr * 0.24},0 0,${-cr * 0.16}`, fill: '#caa24c' }, rose);
         el('polygon', { points: `${-cr * 0.85},0 0,${cr * 0.16} ${cr * 0.24},0 0,${-cr * 0.16}`, fill: '#caa24c' }, rose);
-        const tn = el('text', { x: 0, y: -cr * 0.95, 'text-anchor': 'middle', fill: '#7b2233', 'font-weight': '700' }, rose);
+        const tn = el('text', { x: 0, y: -cr * 0.95, 'text-anchor': 'middle', fill: '#2f6b3d', 'font-weight': '700' }, rose);
         tn.setAttribute('font-size', cr * 0.34);
         tn.setAttribute('font-family', 'Cormorant Garamond, serif');
         tn.textContent = 'N';

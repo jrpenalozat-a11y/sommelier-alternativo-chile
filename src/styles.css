@@ -1,20 +1,22 @@
 /* ════════════════════════════════════════════════════
-   Sommelier Alternativo de Chile — estilo "carta de vinos"
-   Paleta: vino tinto, dorado y crema. Títulos con serifas.
+   Sommelier Alternativo de Chile — estilo "orgánico / sustentable"
+   Paleta: verde bosque/oliva, miel dorada y crema. Títulos con serifas.
+   (Se conservan los nombres de tokens --vino* por compatibilidad;
+    ahora apuntan a tonos verdes.)
    ════════════════════════════════════════════════════ */
 
 :root {
-  --vino: #5b1a2b;
-  --vino-oscuro: #3d1220;
-  --vino-claro: #7b2233;
+  --vino: #2f6b3d;
+  --vino-oscuro: #1d4a28;
+  --vino-claro: #3f8a50;
   --dorado: #c9a24b;
   --dorado-claro: #e3c879;
-  --crema: #f6efe2;
-  --crema-papel: #fbf6ec;
-  --tinta: #2e2024;
-  --tinta-suave: #5d4a4f;
-  --linea: #e0d3bd;
-  --sombra: 0 10px 30px rgba(61, 18, 32, 0.18);
+  --crema: #f1f5ea;
+  --crema-papel: #f8faf1;
+  --tinta: #20302a;
+  --tinta-suave: #4c5d50;
+  --linea: #d4e0cd;
+  --sombra: 0 10px 30px rgba(30, 60, 35, 0.18);
   --serif: 'Cormorant Garamond', 'EB Garamond', Georgia, 'Times New Roman', serif;
   --texto: 'EB Garamond', Georgia, serif;
 }
@@ -87,10 +89,10 @@ body {
   outline: 1px solid rgba(201, 162, 75, 0.4); outline-offset: 5px; position: sticky; top: 12px;
 }
 .mapa-titulo { font-family: var(--serif); text-align: center; color: var(--vino); font-weight: 700; font-size: 22px; margin: 2px 0 0; }
-.mapa-sub { text-align: center; font-style: italic; color: #9a7a3e; font-size: 12px; letter-spacing: 2px; margin: 0 0 8px; }
+.mapa-sub { text-align: center; font-style: italic; color: #5c7d3f; font-size: 12px; letter-spacing: 2px; margin: 0 0 8px; }
 .mapa-area { border-radius: 10px; overflow: hidden; background: linear-gradient(100deg, #d6e1e6 0%, #dde7ea 55%, #e7eef0 100%); border: 1px solid rgba(201, 162, 75, 0.3); }
 .mapa-area svg.mapa-real { width: 100%; height: auto; display: block; }
-.mapa-cargando { padding: 40px 10px; text-align: center; color: #9a7a3e; font-family: var(--serif); font-size: 18px; }
+.mapa-cargando { padding: 40px 10px; text-align: center; color: #5c7d3f; font-family: var(--serif); font-size: 18px; }
 
 .mapa-zona { cursor: pointer; }
 .mapa-zona:hover { filter: brightness(1.1) saturate(1.05); }
@@ -102,7 +104,7 @@ body {
 .mapa-vlabel { font-family: var(--serif); font-style: italic; fill: #5d4a4f; opacity: 0; }
 .mapa-pin-g.activa .mapa-vcnx, .mapa-pin-g:hover .mapa-vcnx { opacity: 0.65; }
 .mapa-pin-g.activa .mapa-vlabel, .mapa-pin-g:hover .mapa-vlabel { opacity: 1; }
-.mapa-zlabel { font-family: var(--serif); font-weight: 600; fill: #6e2230; }
+.mapa-zlabel { font-family: var(--serif); font-weight: 600; fill: #2f6b3d; }
 .mapa-zcnx { stroke: var(--dorado); stroke-width: 1; stroke-dasharray: 2 3; opacity: 0.7; }
 .mapa-hint { text-align: center; font-style: italic; font-size: 13px; color: var(--tinta-suave); margin: 8px 0 2px; }
 .mapa-atrib { text-align: center; font-size: 11px; color: var(--tinta-suave); opacity: 0.7; margin: 2px 0 4px; }
@@ -192,6 +194,60 @@ body {
 }
 .creditos strong { color: var(--vino); font-weight: 600; }
 
+/* Banner de frases ecológicas (rotativo) */
+.eco-banner {
+  text-align: center; font-family: var(--serif); font-style: italic;
+  font-size: 16.5px; color: var(--vino);
+  background: linear-gradient(90deg, transparent, rgba(47, 107, 61, 0.10), transparent);
+  border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea);
+  padding: 10px 16px; margin: 14px 0 4px; letter-spacing: 0.3px;
+  animation: ecoFade 0.6s ease;
+}
+@keyframes ecoFade { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+/* Hoja de parra (icono de marca) */
+.cabecera-copa, .idioma-copa { color: var(--vino); display: inline-flex; align-items: center; justify-content: center; }
+.hoja-parra { display: block; filter: drop-shadow(0 1px 1px rgba(20,50,28,0.18)); }
+
+/* Sello de marca en el pie */
+.marca-logo {
+  display: block; margin: 0 auto 10px; max-width: 240px; width: 60%;
+  border-radius: 10px; border: 1px solid var(--linea);
+  box-shadow: 0 6px 18px rgba(30, 60, 35, 0.18);
+}
+.creditos-texto { font-size: 15px; }
+
+/* Botón compartir (cabecera) */
+.compartir-btn {
+  background: none; border: 1px solid var(--linea); border-radius: 999px;
+  font-size: 1.2rem; cursor: pointer; padding: 4px 10px; line-height: 1; transition: all 0.18s ease;
+}
+.compartir-btn:hover { border-color: var(--dorado); background: rgba(47, 107, 61, 0.1); }
+
+/* Botón instalar PWA (CTA destacado) */
+.instalar-btn {
+  font-family: var(--serif); font-size: 15px; cursor: pointer;
+  background: var(--vino); color: var(--crema-papel); border: 1px solid var(--vino);
+  border-radius: 999px; padding: 7px 14px; transition: all 0.18s ease; white-space: nowrap;
+}
+.instalar-btn:hover { background: var(--vino-claro); transform: translateY(-1px); box-shadow: var(--sombra); }
+
+/* Familia de apps (enlaces cruzados) */
+.familia { margin-bottom: 18px; }
+.familia-titulo {
+  font-family: var(--serif); font-size: 14px; text-transform: uppercase; letter-spacing: 2px;
+  color: var(--tinta-suave); margin: 0 0 10px;
+}
+.familia-apps { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.familia-app {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+  font-family: var(--serif); font-size: 16px; color: var(--vino);
+  background: var(--crema-papel); border: 1px solid var(--linea); border-radius: 999px;
+  padding: 8px 16px; transition: all 0.18s ease;
+}
+.familia-app:hover { border-color: var(--dorado); background: #fff; transform: translateY(-2px); box-shadow: var(--sombra); }
+.familia-emoji { font-size: 18px; }
+
 /* Botón toggle de idioma (cabecera) */
 .idioma-toggle {
   background: none; border: 1px solid var(--linea); border-radius: 999px;
@@ -226,18 +282,18 @@ body {
 
 /* MODO OSCURO */
 [data-tema="oscuro"] {
-  --vino: #c47a6b;
-  --vino-oscuro: #9e5e52;
-  --vino-claro: #d68f7e;
-  --dorado: #e6c97e;
-  --dorado-claro: #f5dfa5;
-  --crema: #2a241f;
-  --crema-papel: #3a2e28;
-  --tinta: #f0e6d8;
-  --tinta-suave: #cdc2b0;
-  --linea: #5f4e3f;
+  --vino: #7fc08a;
+  --vino-oscuro: #5a9e68;
+  --vino-claro: #9ad3a3;
+  --dorado: #d8c87e;
+  --dorado-claro: #efe0a5;
+  --crema: #1f2a22;
+  --crema-papel: #28342a;
+  --tinta: #e6efe2;
+  --tinta-suave: #b8c6b8;
+  --linea: #44503f;
 }
-[data-tema="oscuro"] body { background: #1e1814; }
+[data-tema="oscuro"] body { background: #161e18; }
 .favoritos-badge { background: #e63946; color: white; border-radius: 20px; padding: 0 6px; font-size: 12px; margin-left: 4px; }
 
 @media (max-width: 760px) {

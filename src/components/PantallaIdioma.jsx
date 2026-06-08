@@ -1,5 +1,6 @@
 import React from 'react';
 import { useIdioma } from '../context/IdiomaContext';
+import HojaParra from './HojaParra';
 
 // Pantalla inicial: elegir idioma (se muestra solo si aún no hay idioma guardado)
 export default function PantallaIdioma() {
@@ -7,7 +8,7 @@ export default function PantallaIdioma() {
   return (
     <div className="idioma-pantalla">
       <div className="idioma-card">
-        <span className="idioma-copa" aria-hidden="true">🍷</span>
+        <span className="idioma-copa" aria-hidden="true"><HojaParra size={54} /></span>
         <h1 className="idioma-titulo">Sommelier Alternativo de Chile</h1>
         <p className="idioma-sub">Elige tu idioma · Choose your language</p>
         <div className="idioma-botones">

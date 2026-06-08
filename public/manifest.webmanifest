@@ -1,0 +1,14 @@
+{
+  "name": "Sommelier Alternativo de Chile",
+  "short_name": "Sommelier Alt.",
+  "description": "Viñas alternativas chilenas: naturales, biodinámicas, orgánicas y de rescate patrimonial.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f1f5ea",
+  "theme_color": "#2f6b3d",
+  "icons": [
+    { "src": "icono.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
